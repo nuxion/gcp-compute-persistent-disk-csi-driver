@@ -19,7 +19,8 @@ set -x
 
 readonly NAMESPACE="${GCE_PD_DRIVER_NAMESPACE:-gce-pd-csi-driver}"
 readonly DEPLOY_VERSION="${GCE_PD_DRIVER_VERSION:-stable-master}"
-readonly PKGDIR="${GOPATH}/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver"
+# readonly PKGDIR="${GOPATH}/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver"
+readonly PKGDIR="${PWD}"
 source "${PKGDIR}/deploy/common.sh"
 
 print_usage()

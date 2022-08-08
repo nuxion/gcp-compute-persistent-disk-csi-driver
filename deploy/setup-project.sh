@@ -20,7 +20,8 @@
 set -o nounset
 set -o errexit
 
-readonly PKGDIR="${GOPATH}/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver"
+# readonly PKGDIR="${GOPATH}/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver"
+readonly PKGDIR="${PWD}"
 
 source "${PKGDIR}/deploy/common.sh"
 
