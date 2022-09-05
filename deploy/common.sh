@@ -19,13 +19,12 @@ function ensure_var(){
 
 function get_needed_roles()
 {
-	#echo "roles/compute.storageAdmin roles/iam.serviceAccountUser projects/${PROJECT}/roles/gcp_compute_persistent_disk_csi_driver_custom_role"
-	echo "roles/compute.storageAdmin roles/iam.serviceAccountUser"
+	echo "roles/compute.storageAdmin roles/iam.serviceAccountUser projects/${PROJECT}/roles/gcp_compute_persistent_disk_csi_driver_custom_role"
 }
 
 # Installs kustomize in ${PKGDIR}/bin
 function ensure_kustomize()
 {
   ensure_var PKGDIR
-  #"${PKGDIR}/deploy/kubernetes/install-kustomize.sh"
+  "${PKGDIR}/deploy/kubernetes/install-kustomize.sh"
 }

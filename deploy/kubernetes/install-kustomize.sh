@@ -7,7 +7,8 @@
 set -o nounset
 set -o errexit
 
-readonly INSTALL_DIR="${GOPATH}/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/bin"
+BASE_PATH=`git rev-parse --show-toplevel`
+readonly INSTALL_DIR="${BASE_PATH}/bin"
 readonly KUSTOMIZE_PATH="${INSTALL_DIR}/kustomize"
 
 if [ ! -f "${INSTALL_DIR}" ]; then
